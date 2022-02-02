@@ -15,10 +15,9 @@ export default {
     }
   },
   created() {
-    var vm = this;
     fetchNewsList()
     .then((response) => {
-      vm.users = response.data;
+      this.users = response.data;
       console.log(vm.users);
     })
     .catch((error) => {
