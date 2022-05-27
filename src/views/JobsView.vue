@@ -16,10 +16,9 @@ export default {
     }
   },
   created() {
-    var vm = this;
     fetchJobsList()
     .then((response) => {
-      vm.jobs = response.data;
+      this.jobs = response.data;
       console.log(vm.jobs);
     })
     .catch((error) => {
